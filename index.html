@@ -16,7 +16,7 @@
     <link href="style.css" rel="stylesheet">
 
   </head>
-  <body>
+  <body ng-app>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -32,31 +32,23 @@
 
     <div class="mainwrapper">
     <div class="bg"><div class="bgfilter"></div></div>
-    <div class="container">
+    <div class="container" ng-controller="teamCtrl">
       <h1 class="centeredText headfont" style="margin: 40px;">Department of Creative Media, IIT Indore</h1>
-      <div class="card">
-        <h3 class="centeredText headfont">Miroojin Bakshi</h1>
-        <div class="centeredText">B. Tech (CSE), II year</div>
-      </div>
-      <div class="card">
-        <h3 class="centeredText headfont">B Krishna Chaitanya</h1>
-        <div class="centeredText">B. Tech (CSE), II year</div>
-      </div>
-      <div class="card">
-        <h3 class="centeredText headfont">Atul Choudhary</h1>
-        <div class="centeredText">B. Tech (ME), II year</div>
-      </div>
-      <div class="card">
-        <h3 class="centeredText headfont">Sikhar Singh</h1>
-        <div class="centeredText">B. Tech (CSE), III year</div>
-      </div>
-      <div class="card">
-        <h3 class="centeredText headfont">Aashish Aryan</h1>
-        <div class="centeredText">B. Tech (CSE), III year</div>
+      <div class="card" ng-repeat="mem in teamMembers">
+        <h3 class="centeredText headfont">{{mem.name}}</h1>
+        <div class="details">
+        <div class="detail">
+        <div class="centeredText">{{mem.designation}}</div>
+        <div class="centeredText">Contact: {{mem.contact}}</div>
+        </div>
+        <div class="social"><a target="_blank" href="{{mem.fb}}"><img src="img/social/facebookgray.png" alt="FB"></a></div>
+        </div>
       </div>
     </div><!-- /.container -->
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

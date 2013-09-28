@@ -50,6 +50,19 @@ body {
           transform: scale(1.09); 
 }
 .card h3{
-	margin: 5px;
+	margin: 20px 5px;
 	padding: 0;
+}
+.card .detail{
+	float: left;
+	padding: 10px 30px;
+	display: block;
+}
+.card .social{
+	padding: 15px;
+	display: table;
+}
+.card .social img{
+	height: 30px;
+	margin: 0 auto;
 }
